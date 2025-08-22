@@ -11,7 +11,7 @@
         </h2>
 
         <!-- 2. Karte mit beiden Markern -->
-        <div id="map" class="w-full h-96 rounded-2xl shadow-lg overflow-hidden"></div>
+        <div id="map" class="w-full z-1 h-96 rounded-2xl shadow-lg overflow-hidden"></div>
 
         <!-- 3. Adress-Infos mit Google-Maps-Links -->
         <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8">

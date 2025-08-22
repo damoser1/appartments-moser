@@ -8,10 +8,10 @@
     @vite('resources/js/app.js')
     @vite('resources/js/header.js')
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-white text-gray-800">
 <x-header />
 
-<main class="mt-6">
+<main class="bg-white pt-6">
     @yield('content')
 </main>
 </body>
