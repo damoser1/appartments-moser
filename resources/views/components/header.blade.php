@@ -25,11 +25,11 @@
 
         {{-- 3) Aktion-Buttons --}}
         <div class="flex flex-col items-center gap-3 flex-shrink-0 md:items-end md:flex-col xl:flex-row lg:gap-3 xl:items-center">
-            <a href="{{ url('/appartement/sonnbichl') }}"
+            <a href="{{ route('appartement.sonnbichl') }}"
                class="max-w-xs whitespace-normal bg-[#0077B6] hover:bg-[#005F94] text-white font-semibold py-2 px-4 rounded-xl shadow text-center">
                 Apartment Sonnbichl
             </a>
-            <a href="{{ url('/appartement/grundnergütl') }}"
+            <a href="{{ route('appartment.grundnerguetl') }}"
                class="max-w-xs whitespace-normal bg-[#90E0EF] hover:bg-[#62C9E3] text-[#1E1E1E] font-semibold py-2 px-4 rounded-xl shadow text-center">
                 Apartment Grundnergütl
             </a>
