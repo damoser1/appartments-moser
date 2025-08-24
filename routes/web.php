@@ -12,6 +12,12 @@ Route::get('/appartment/sonnbichl', function () {
 Route::get('/appartment/grundnerguetl', function () {
     return view('appartments/appartment-grundnerguetl/grundnerguetl');})->name('grundnerguetl');
 
-Route::view('/impressum', 'appartments/appartment-sonnbichl/impressum')->name('impressum-sonnbichl');
+Route::view(
+    '/impressum',
+    'appartments/appartment-sonnbichl/partials/impressum'
+)->name('impressum-sonnbichl');
 
-Route::view('/datenschutz', 'appartments/appartment-sonnbichl/datenschutz')->name('datenschutz-sonnbichl');
+Route::view(
+    '/datenschutz',
+    'appartments/appartment-sonnbichl/partials/datenschutz'
+)->name('datenschutz-sonnbichl');
