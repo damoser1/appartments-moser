@@ -19,7 +19,7 @@
             {{-- Desktop Nav --}}
             <nav class="hidden md:flex items-center gap-8 font-medium">
                 <a href="{{ url('/') }}" class="text-gray-700 hover:text-[#0F766E] transition">Home</a>
-                <a href="{{ url('/appartement/sonnbichl') }}" class="text-gray-700 hover:text-[#0F766E] transition">Appartement</a>
+                <a href="{{ url('/appartment/sonnbichl') }}" class="text-gray-700 hover:text-[#0F766E] transition">Appartement</a>
                 <a href="{{ url('/galerie') }}" class="text-gray-700 hover:text-[#0F766E] transition">Galerie</a>
                 <a href="{{ url('/umgebung') }}" class="text-gray-700 hover:text-[#0F766E] transition">Umgebung</a>
                 <a href="{{ url('/kontakt') }}" class="text-gray-700 hover:text-[#0F766E] transition">Kontakt</a>
@@ -53,7 +53,7 @@
     <div id="mobile-menu" class="md:hidden hidden border-t border-gray-100">
         <div class="px-6 py-4 space-y-2 bg-white">
             <a href="{{ url('/') }}" class="block px-3 py-2 rounded-lg text-gray-800 hover:bg-gray-50">Home</a>
-            <a href="{{ url('/appartement/sonnbichl') }}" class="block px-3 py-2 rounded-lg text-gray-800 hover:bg-gray-50">Appartement</a>
+            <a href="{{ url('/appartment/sonnbichl') }}" class="block px-3 py-2 rounded-lg text-gray-800 hover:bg-gray-50">Appartement</a>
             <a href="{{ url('/galerie') }}" class="block px-3 py-2 rounded-lg text-gray-800 hover:bg-gray-50">Galerie</a>
             <a href="{{ url('/umgebung') }}" class="block px-3 py-2 rounded-lg text-gray-800 hover:bg-gray-50">Umgebung</a>
             <a href="{{ url('/kontakt') }}" class="block px-3 py-2 rounded-lg text-gray-800 hover:bg-gray-50">Kontakt</a>

@@ -13,7 +13,7 @@
         <!-- 3. Adress-Infos mit Google-Maps-Links -->
         <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div class="space-y-2">
-                <h3 class="font-semibold text-xl text-[#0077B6]">Appartement Sonnbichl</h3>
+                <h3 class="font-semibold text-xl text-[#0077B6]">Appartment Sonnbichl</h3>
                 <p class="text-[#3A3A3A]">
                     Ecking 29<br>
                     5771 Leogang<br>
@@ -28,7 +28,7 @@
                 </a>
             </div>
             <div class="space-y-2">
-                <h3 class="font-semibold text-xl text-[#90E0EF]">Appartement Grundnergütl</h3>
+                <h3 class="font-semibold text-xl text-[#90E0EF]">Appartment Grundnergütl</h3>
                 <p class="text-[#3A3A3A]">
                     Ecking 28<br>
                     5771 Leogang<br>
