@@ -17,14 +17,14 @@
             {{-- Sonnbichl --}}
             <div class="flex flex-col items-center">
                 <img src="{{ asset('assets/bildtransparent.png') }}" alt="Demo Sonnbichl" class="w-full h-auto object-cover rounded-lg mb-4 max-h-96">
-                <a href="{{ url('/appartement/sonnbichl') }}" class="w-full max-w-xs text-center px-6 py-4 bg-[#0077B6] hover:bg-[#005F94] text-white font-semibold rounded-lg shadow-md transition mb-6 sm:mb-0">
+                <a href="{{ url('/appartment/sonnbichl') }}" class="w-full max-w-xs text-center px-6 py-4 bg-[#0077B6] hover:bg-[#005F94] text-white font-semibold rounded-lg shadow-md transition mb-6 sm:mb-0">
                     Appartement Sonnbichl ansehen
                 </a>
             </div>
             {{-- Grundnergütl --}}
             <div class="flex flex-col items-center">
                 <img src="{{ asset('assets/bildtransparent.png') }}" alt="Demo Grundnergütl" class="w-full h-auto object-cover rounded-lg mb-4 max-h-96">
-                <a href="{{ url('/appartement/grundnergütl') }}" class="w-full max-w-xs text-center px-6 py-4 bg-[#90E0EF] hover:bg-[#62C9E3] text-[#1E1E1E] font-semibold rounded-lg shadow-md transition">
+                <a href="{{ url('/appartment/grundnergütl') }}" class="w-full max-w-xs text-center px-6 py-4 bg-[#90E0EF] hover:bg-[#62C9E3] text-[#1E1E1E] font-semibold rounded-lg shadow-md transition">
                     Appartement Grundnergütl ansehen
                 </a>
             </div>
