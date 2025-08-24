@@ -2,6 +2,14 @@
 
 @section('title', 'Startseite')
 
+@section('scripts')
+    @vite('resources/js/header.js')
+@endsection
+
+@section('header')
+    <x-header />
+@endsection
+
 @section('content')
     @include('mainpage/partials/hero')
     @include('mainpage/partials/benefits')
