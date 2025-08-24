@@ -19,7 +19,7 @@
             <a href="https://www.saalfelden-leogang.com/de/suchen-buchen/Ferienwohnung-Grundnerguetl-Ferienwohnung-Appartement-Leogang_ad-7180296" target="_blank" class="bg-[#90E0EF] hover:bg-[#62C9E3] text-[#1E1E1E] font-semibold py-2 px-4 rounded-lg shadow">
                 Weitere Infos
             </a>
-            <a href="{{ url('/appartement/sonnbichl') }}" class="bg-[#0077B6] hover:bg-[#005F94] text-white font-semibold py-2 px-4 rounded-lg shadow">
+            <a href="{{ route('sonnbichl') }}" class="bg-[#0077B6] hover:bg-[#005F94] text-white font-semibold py-2 px-4 rounded-lg shadow">
                 Zum Appartement Sonnbichl
             </a>
         </div>
