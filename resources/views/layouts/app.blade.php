@@ -6,10 +6,10 @@
     <title>@yield('title', 'Appartments Moser')</title>
     @vite('resources/css/app.css')
     @vite('resources/js/app.js')
-    @vite('resources/js/header.js')
+    @yield('scripts')
 </head>
 <body class="bg-white text-gray-800">
-<x-header />
+@yield('header')
 
 <main class="bg-white pt-6">
     @yield('content')
