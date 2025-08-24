@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const header = document.getElementById('mainHeader');
-
     // Standort-Rotation
     const standorte = ['am Sonnbichl', 'am Grundnergütl'];
     let idx = 0;
@@ -17,13 +15,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 500);
         }, 3000);
     }
-
-    // Scroll-Handler: Header ein-/ausblenden
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 0) {
-            header.classList.remove('-translate-y-full');
-        } else {
-            header.classList.add('-translate-y-full');
-        }
-    });
 });

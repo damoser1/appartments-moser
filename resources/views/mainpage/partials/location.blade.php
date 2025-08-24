@@ -1,7 +1,4 @@
-<link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-/>
+
 
 <section class="py-16 bg-white">
     <div class="max-w-4xl mx-auto px-6">
@@ -11,7 +8,7 @@
         </h2>
 
         <!-- 2. Karte mit beiden Markern -->
-        <div id="map" class="w-full h-96 rounded-2xl shadow-lg overflow-hidden"></div>
+        <div id="map" class="w-full z-1 h-96 rounded-2xl shadow-lg overflow-hidden"></div>
 
         <!-- 3. Adress-Infos mit Google-Maps-Links -->
         <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -48,37 +45,37 @@
         </div>
     </div>
 </section>
+<div id="map" class="w-full h-96 rounded-2xl shadow-lg overflow-hidden"></div>
 
-<!-- 4. Leaflet JS (am Ende der Seite) -->
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-    // Karte initialisieren
-    const map = L.map('map');
+    window.initMap = function () {
+        const markers = [
+            { position: { lat: 47.4453191, lng: 12.7965295 }, title: 'Appartement Sonnbichl' },
+            { position: { lat: 47.4450325, lng: 12.7958214 }, title: 'Appartement Grundnergütl' }
+        ];
 
-    // OSM-Tiles hinzufügen
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
+        // Map mit Startcenter/zoom anlegen (Pflicht), danach fitBounds nutzen
+        const map = new google.maps.Map(document.getElementById('map'), {
+            center: markers[0].position,
+            zoom: 14,                       // beliebig – wird gleich von fitBounds überschrieben
+            // mapId: 'DEIN_MAP_ID'          // optional, falls du ein Cloud-Map-Style nutzt
+        });
 
-    // Marker-Daten
-    const markers = [
-        {
-            coords: [47.4453191, 12.7965295],
-            popup: '<strong>Appartement Sonnbichl</strong><br>Ecking 29'
-        },
-        {
-            coords: [47.4450325, 12.7958214],
-            popup: '<strong>Appartement Grundnergütl</strong><br>Ecking 28'
-        }
-    ];
+        const bounds = new google.maps.LatLngBounds();
 
-    // Marker setzen und Bounds sammeln
-    const bounds = [];
-    markers.forEach(m => {
-        L.marker(m.coords).addTo(map).bindPopup(m.popup);
-        bounds.push(m.coords);
-    });
+        markers.forEach((m) => {
+            new google.maps.Marker({ position: m.position, map, title: m.title });
+            bounds.extend(m.position);
+        });
 
-    // Auf beide Marker zoomen
-    map.fitBounds(bounds, { padding: [40, 40] });
+        // Karte so zoomen/zentrieren, dass beide Marker sichtbar sind
+        map.fitBounds(bounds);
+    };
+</script>
+
+<!-- Google Maps JS laden (Key serverseitig einfügen) -->
+<script
+    async
+    defer
+    src="https://maps.googleapis.com/maps/api/js?key={{ config('services.google_maps.api_key') }}&callback=initMap">
 </script>

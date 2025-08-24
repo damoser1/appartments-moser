@@ -1,5 +1,5 @@
 <header id="mainHeader"
-        class="sticky top-0 z-50 bg-[#F0F4F8] shadow-md py-6 sm:py-4 px-6 transform -translate-y-full transition-transform duration-300">
+        class="sticky top-0 z-10 bg-white shadow-md py-6 sm:py-4 px-6">
     <div class="flex flex-col md:flex-row items-center md:justify-between flex-wrap gap-4">
 
         {{-- 1) Hamburger-Button --}}

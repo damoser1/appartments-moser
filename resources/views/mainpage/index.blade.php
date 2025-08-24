@@ -7,4 +7,5 @@
     @include('mainpage/partials/benefits')
     @include('mainpage/partials/location')
     @include('mainpage/partials/about')
+
 @endsection
