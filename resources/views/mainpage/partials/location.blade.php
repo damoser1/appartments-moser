@@ -1,10 +1,10 @@
-<section class="py-16 bg-white">
+<section class="py-8 sm:py-12 xl:py-16 bg-white">
     <div class="max-w-4xl mx-auto px-6">
         <h2 class="text-3xl font-bold text-center text-brand-charcoal mb-8">Unsere Standorte</h2>
 
         <div id="map" class="w-full h-96 rounded-2xl shadow-lg overflow-hidden"></div>
 
-        <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 md:ml-2 lg:ml-0">
             <div class="space-y-2">
                 <h3 class="font-semibold text-xl text-brand-goldDark">Appartment Sonnbichl</h3>
                 <p class="text-gray-700">
