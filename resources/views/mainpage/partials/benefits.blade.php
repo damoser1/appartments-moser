@@ -1,4 +1,4 @@
-<section class="py-20 bg-white" aria-labelledby="benefits-heading">
+<section class="py-10 sm:py-15 xl:py-20 bg-white" aria-labelledby="benefits-heading">
     <div class="max-w-6xl mx-auto px-6">
         <div class="text-center max-w-3xl mx-auto">
             <h2 id="benefits-heading" class="text-4xl font-extrabold tracking-tight text-brand-charcoal">

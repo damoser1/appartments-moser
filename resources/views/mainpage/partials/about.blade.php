@@ -1,11 +1,11 @@
-<section class="py-20 bg-white" aria-labelledby="about-leogang-heading">
+<section class="py-2 sm:py-5 xl:py-10 bg-white" aria-labelledby="about-leogang-heading">
     <div class="max-w-6xl mx-auto px-6">
         <div class="text-center max-w-3xl mx-auto">
             <h2 id="about-leogang-heading" class="text-4xl font-extrabold tracking-tight text-brand-charcoal">
                 Über <span class="text-brand-pine">Leogang</span>
             </h2>
             <p class="mt-4 text-lg text-gray-700">
-                Leogang ist ein echter Allrounder in den Alpen …
+                Leogang ist ein echter Allrounder in den Alpen
             </p>
         </div>
 
