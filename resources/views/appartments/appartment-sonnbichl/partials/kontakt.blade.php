@@ -1,4 +1,3 @@
-
 @php
     // WhatsApp
     $waPhone = '436648587644';
@@ -18,29 +17,23 @@
     );
 @endphp
 
-<section class="relative bg-white p-14 sm:p-18 xl:pt-40 xl:pb-36 overflow-hidden">
-    {{-- Gelber Glow-Hintergrund nur ab xl --}}
-    <div class="absolute inset-0 hidden xl:flex items-end justify-center pointer-events-none">
-        <div class="w-[80%] h-[60%] bg-brand-gold/70 rounded-full blur-[120px] translate-y-12"></div>
-    </div>
+<section id="kontakt" class="w-full bg-white py-24">
+    <div class="max-w-3xl mx-auto px-6 sm:px-10 text-center">
+        <h1 class="text-4xl font-bold text-brand-charcoal mb-12">
+            Kontakt aufnehmen
+        </h1>
 
-    <div class="relative max-w-3xl mx-auto px-6 text-center">
-        <h2 class="text-3xl sm:text-4xl font-extrabold ">
-            Buche jetzt dein Apartment
-        </h2>
-        <p class="mt-3 text-lg text-gray-700">
-            Schreib uns direkt – schnell & unkompliziert per WhatsApp oder E-Mail.
+        <p class="text-lg text-gray-700 mb-10">
+            Hast du Fragen oder möchtest direkt buchen? Kontaktiere uns einfach per WhatsApp oder E-Mail.
         </p>
 
         {{-- Buttons --}}
-        <div class="mt-8 flex flex-col sm:flex-row sm:justify-center gap-4">
+        <div class="flex flex-col gap-4 mb-6">
             {{-- WhatsApp --}}
             <a href="https://wa.me/{{ $waPhone }}?text={{ $waMsg }}"
                target="_blank" rel="noopener"
-               class="inline-flex items-center justify-center gap-2 w-full sm:w-auto
-              px-4 py-3 sm:px-8 sm:py-4 rounded-2xl
-              bg-brand-gold hover:bg-brand-goldDark text-brand-charcoal font-semibold
-              text-sm sm:text-base shadow-md transition">
+               class="inline-flex items-center justify-center gap-2 w-full px-8 py-4 rounded-2xl
+                      bg-brand-gold hover:bg-brand-goldDark text-brand-charcoal font-semibold shadow-md transition">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M20.52 3.48A11.94 11.94 0 0 0 12.05 0C5.5 0 .2 5.3.2 11.84c0 2.08.55 4.1 1.6 5.9L0 24l6.42-1.67a11.8 11.8 0 0 0 5.63 1.44h.01c6.55 0 11.85-5.3 11.85-11.84 0-3.17-1.24-6.16-3.39-8.45Z"/>
                 </svg>
@@ -49,10 +42,8 @@
 
             {{-- E-Mail --}}
             <a href="mailto:{{ $mailTo }}?subject={{ $subject }}&body={{ $mailBody }}"
-               class="inline-flex items-center justify-center gap-2 w-full sm:w-auto
-              px-4 py-3 sm:px-8 sm:py-4 rounded-2xl
-              bg-brand-gold hover:bg-brand-goldDark text-brand-charcoal font-semibold
-              text-sm sm:text-base shadow-md transition">
+               class="inline-flex items-center justify-center gap-2 w-full px-8 py-4 rounded-2xl
+                      bg-brand-gold hover:bg-brand-goldDark text-brand-charcoal font-semibold shadow-md transition">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v.2l-10 5.6L2 6.2V6Zm0 2.9v9.1a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8.9l-10 5.6L2 8.9Z"/>
                 </svg>
@@ -60,15 +51,23 @@
             </a>
         </div>
 
-        {{-- Kontaktinfo --}}
-        <div class="mt-6 text-gray-700">
-            <p><strong>Telefon:</strong> +43 664 8587644</p>
+        {{-- Telefonnummer & E-Mail direkt unter den Buttons --}}
+        <div class="text-gray-700 mb-12">
+            <p><strong>Telefon:</strong> <a href="tel:+436648587644" class="text-brand-forest hover:underline">+43 664 8587644</a></p>
             <p><strong>E-Mail:</strong>
                 <a href="mailto:{{ $mailTo }}" class="text-brand-forest hover:underline">
                     {{ $mailTo }}
                 </a>
             </p>
         </div>
+
+        {{-- Zurück --}}
+        <div>
+            <a href="{{ route('sonnbichl') }}"
+               class="inline-flex items-center px-8 py-4 rounded-2xl bg-brand-gold hover:bg-brand-goldDark
+                text-brand-charcoal font-semibold shadow-md transition">
+                ← Zurück zum Apartment
+            </a>
+        </div>
     </div>
 </section>
-

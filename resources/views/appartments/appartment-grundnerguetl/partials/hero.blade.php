@@ -2,42 +2,42 @@
 <section class="relative bg-white">
     {{-- Gradient nur ab xl --}}
     <div aria-hidden="true" class="hidden xl:block pointer-events-none absolute inset-0">
-        <div class="absolute -top-32 -left-32 w-[42rem] h-[42rem] rounded-full bg-brand-gold/10 blur-3xl"></div>
-        <div class="absolute -bottom-40 -right-24 w-[36rem] h-[36rem] rounded-full bg-brand-cream blur-3xl"></div>
+        <div class="absolute -top-32 -left-32 w-[42rem] h-[42rem] rounded-full bg-brand-mintLight blur-3xl"></div>
+        <div class="absolute -bottom-40 -right-24 w-[36rem] h-[36rem] rounded-full bg-brand-mint blur-3xl"></div>
     </div>
 
     <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 lg:pt-12 relative">
         <div class="grid xl:grid-cols-2 gap-10 items-center">
             <div class="order-2 xl:order-1 space-y-6 text-center xl:text-left">
-                <span class="inline-flex items-center gap-2 rounded-full border border-brand-gold/30 bg-white px-3 py-1 text-xs font-medium text-brand-charcoal mx-auto sm:mx-0">
+                <span class="inline-flex items-center gap-2 rounded-full border border-brand-pine/30 bg-white px-3 py-1 text-xs font-medium text-brand-charcoal mx-auto sm:mx-0">
                     Alpine Hideaway · Leogang
                 </span>
 
                 <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-brand-charcoal">
-                    Appartement <span class="text-brand-gold">Sonnbichl</span>
+                    Appartement <span class="text-brand-pine">Grundnergütl</span>
                 </h1>
 
-                <p class="text-lg text-gray-700 leading-relaxed text-center xl:text-left max-w-xl mx-auto xl:mx-0">
-                    Dein Rückzugsort mit Panoramablick: privater Spa, sonniger Außenbereich und Trails direkt vor der Haustür.
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Gemütliches Ferienapartment mit Balkon, Gartenblick und moderner Ausstattung – ideal für Paare oder Familien.
                 </p>
 
-                <div class="flex flex-wrap justify-center xl:justify-start gap-2">
-                    <span class="px-3 py-1 rounded-full bg-brand-pine/12 text-brand-forest ring-1 ring-brand-pine/20 text-sm hover:bg-brand-pine/20 transition">
-                        Privater Spa
+                <div class="flex flex-wrap gap-2 justify-center xl:justify-start">
+                    <span class="px-3 py-1 rounded-full bg-brand-cream text-brand-goldDark ring-1 ring-brand-gold text-sm">
+                        Balkon mit Bergblick
                     </span>
-                    <span class="px-3 py-1 rounded-full bg-brand-pine/12 text-brand-forest ring-1 ring-brand-pine/20 text-sm hover:bg-brand-pine/20 transition">
-                        Balkon &amp; Garten
+                    <span class="px-3 py-1 rounded-full bg-brand-cream text-brand-goldDark ring-1 ring-brand-gold text-sm">
+                        Familienfreundlich
                     </span>
-                    <span class="px-3 py-1 rounded-full bg-brand-pine/12 text-brand-forest ring-1 ring-brand-pine/20 text-sm hover:bg-brand-pine/20 transition">
-                        WLAN &amp; Parkplatz inkl.
+                    <span class="px-3 py-1 rounded-full bg-brand-cream text-brand-goldDark ring-1 ring-brand-gold text-sm">
+                        WLAN & Parkplatz inkl.
                     </span>
                 </div>
 
                 <div class="pt-2">
                     <a href="{{ url('/kontakt#formular') }}"
                        class="inline-flex items-center justify-center rounded-xl px-6 py-3
-                  bg-brand-gold hover:bg-brand-goldDark text-brand-charcoal font-medium
-                  shadow transition mx-auto sm:mx-0">
+                              bg-brand-pine hover:bg-brand-forest text-white font-medium
+                              shadow transition">
                         Jetzt Kontakt aufnehmen
                     </a>
                 </div>
@@ -45,7 +45,7 @@
 
             {{-- Slideshow nur ab xl --}}
             <div class="order-1 xl:order-2 hidden xl:block">
-                <div class="relative group rounded-3xl overflow-hidden shadow-2xl ring-1 ring-brand-gold/25">
+                <div class="relative group rounded-3xl overflow-hidden shadow-2xl ring-1 ring-brand-pine/25">
 
                     @php
                         $slides = [
@@ -87,7 +87,7 @@
                         {{-- Dots --}}
                         <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-white/80 rounded-full px-2 py-1 shadow">
                             @foreach($slides as $i => $src)
-                                <button class="h-2.5 w-2.5 rounded-full bg-gray-300 data-[active=true]:bg-brand-gold"
+                                <button class="h-2.5 w-2.5 rounded-full bg-gray-300 data-[active=true]:bg-brand-pine"
                                         aria-label="Gehe zu Slide {{ $i+1 }}"
                                         data-dot="{{ $i }}"></button>
                             @endforeach
@@ -153,3 +153,4 @@
         })();
     </script>
 @endpush
+

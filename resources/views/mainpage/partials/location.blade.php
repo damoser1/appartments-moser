@@ -1,4 +1,5 @@
-<section class="py-8 sm:py-12 xl:py-16 bg-white">
+<section id="standort"
+         class="py-16 bg-white scroll-mt-60 sm:scroll-mt-56 md:scroll-mt-48 lg:scroll-mt-40 xl:scroll-mt-32">
     <div class="max-w-4xl mx-auto px-6">
         <h2 class="text-3xl font-bold text-center text-brand-charcoal mb-8">Unsere Standorte</h2>
 

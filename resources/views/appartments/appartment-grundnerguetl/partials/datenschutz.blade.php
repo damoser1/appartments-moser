@@ -1,4 +1,4 @@
-<section id="datenschutz" class="w-full bg-white pb-10 md:py-24">
+<section id="datenschutz" class="w-full bg-white py-24">
     <div class="max-w-3xl mx-auto px-6 sm:px-10">
         <h1 class="text-4xl font-bold text-brand-charcoal text-center mb-12">
             Datenschutz
@@ -35,18 +35,18 @@
                 <p>
                     Du hast jederzeit das Recht auf Auskunft über deine gespeicherten Daten, deren Berichtigung,
                     Löschung oder Einschränkung der Verarbeitung. Wende dich dazu bitte an:
-                    <a href="mailto:harald.moser@sbg.at" class="text-brand-forest hover:underline">harald.moser@sbg.at</a>.
+                    <a href="mailto:reiseservice@saalfelden-leogang.at" class="text-brand-forest hover:underline">reiseservice@saalfelden-leogang.at</a>.
                 </p>
             </div>
         </div>
 
-        {{-- Zurück-Button --}}
         <div class="mt-16 flex justify-center">
-            <a href="{{ route('sonnbichl') }}"
-               class="inline-flex items-center px-8 py-4 rounded-2xl bg-brand-gold hover:bg-brand-goldDark
-                text-brand-charcoal font-semibold shadow-md transition">
+            <a href="{{ route('grundnerguetl') }}"
+               class="inline-flex items-center px-8 py-4 rounded-2xl bg-brand-pine hover:bg-brand-forest
+                text-white font-semibold shadow-md transition">
                 ← Zurück zur Apartmentseite
             </a>
         </div>
     </div>
 </section>
+

@@ -1,5 +1,4 @@
-{{-- Impressum --}}
-<section id="impressum" class="w-full bg-white md:py-24 text-center">
+<section id="impressum" class="w-full bg-white py-24 text-center">
     <div class="max-w-3xl mx-auto px-6 sm:px-10">
         <h1 class="text-4xl font-bold text-brand-charcoal mb-12">
             Impressum
@@ -9,9 +8,9 @@
             <div>
                 <p class="font-semibold">Anbieter</p>
                 <p>
-                    Appartement Moser am Sonnbichl<br>
-                    Harald Moser<br>
-                    Ecking 29<br>
+                    Appartement Moser am Grundnergütl<br>
+                    Thomas Moser<br>
+                    Ecking 28<br>
                     5771 Leogang<br>
                     Österreich
                 </p>
@@ -19,20 +18,20 @@
 
             <div>
                 <p>
-                    Telefon: <a href="tel:+436648587644" class="text-brand-forest hover:underline">+43 664 8587644</a><br>
-                    E-Mail: <a href="mailto:harald.moser@sbg.at" class="text-brand-forest hover:underline">harald.moser@sbg.at</a>
+                    Telefon: <a href="tel:+4369911677336" class="text-brand-forest hover:underline">+43 699 11677336</a><br>
+                    E-Mail: <a href="mailto:reiseservice@saalfelden-leogang.at" class="text-brand-forest hover:underline">reiseservice@saalfelden-leogang.at</a>
                 </p>
             </div>
         </div>
 
-        {{-- Zurück-Button --}}
         <div class="mt-16 flex justify-center">
-            <a href="{{ route('sonnbichl') }}"
+            <a href="{{ route('grundnerguetl') }}"
                class="inline-flex items-center gap-2 px-8 py-4 rounded-2xl
-                bg-brand-gold hover:bg-brand-goldDark
-                text-brand-charcoal font-semibold shadow-md transition">
+                bg-brand-pine hover:bg-brand-forest
+                text-white font-semibold shadow-md transition">
                 ← Zurück zur Apartmentseite
             </a>
         </div>
     </div>
 </section>
+

@@ -1,24 +1,25 @@
+
 <header class="sticky top-0 z-50 mt-2 sm:mt-4 bg-white/95 backdrop-blur shadow-sm border-b border-gray-100 transition-all">
     {{-- Gold-Akzentleiste (verschwindet nach Scroll) --}}
-    <div id="accentBar" class="h-1 bg-brand-gold opacity-100 transition-all duration-300"></div>
+    <div id="accentBar" class="h-1 bg-brand-pine opacity-100 transition-all duration-300"></div>
 
     <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 mt-2">
         <div class="flex items-center justify-between h-16 sm:h-18">
             {{-- Logo + Seitentitel --}}
             <a href="{{ url('/') }}" class="flex items-center gap-3">
-                <img src="{{ asset('assets/icon-sonnbichl.png') }}" alt="Logo Sonnbichl"
+                <img src="{{ asset('assets/icon-grundnerguetl.png') }}" alt="Logo Sonnbichl"
                      class="h-26 w-auto mr-[-20px]" loading="eager" decoding="async">
                 <div class="leading-tight">
-                    <div class="text-sm font-semibold text-brand-charcoal">Appartement</div>
-                    <div class="text-lg font-extrabold text-brand-gold">Sonnbichl</div>
+                    <div class="text-sm font-semibold text-brand-charcoal">Apartment</div>
+                    <div class="text-lg font-extrabold text-brand-pine">Sonnbichl</div>
                 </div>
             </a>
 
             {{-- Hauptnavigation (≥ lg) --}}
             <nav class="hidden lg:flex items-center gap-7 font-medium">
                 <a href="{{ url('/') }}"                 class="text-brand-charcoal hover:text-brand-forest transition">Startseite</a>
-                <a href="{{ url('/galerie') }}"          class="text-brand-charcoal hover:text-brand-forest transition">Galerie</a>
-                <a href="{{ route('kontakt-sonnbichl') }}" class="text-brand-charcoal hover:text-brand-forest transition">Kontakt</a>
+                <a href="{{ url('/gallerie-grund') }}"          class="text-brand-charcoal hover:text-brand-forest transition">Galerie</a>
+                <a href="{{ route('kontakt-grund') }}" class="text-brand-charcoal hover:text-brand-forest transition">Kontakt</a>
             </nav>
 
             {{-- Mobile Toggle (nur < lg) --}}
@@ -37,8 +38,8 @@
     <div id="mobile-menu" class="lg:hidden hidden border-t border-gray-100">
         <div class="px-6 py-4 space-y-1 bg-white">
             <a href="{{ url('/') }}"                 class="block rounded-lg px-3 py-2 text-brand-charcoal hover:bg-gray-50">Startseite</a>
-            <a href="{{ url('/galerie') }}"          class="block rounded-lg px-3 py-2 text-brand-charcoal hover:bg-gray-50">Galerie</a>
-            <a href="{{ route('kontakt-sonnbichl') }}" class="block rounded-lg px-3 py-2 text-brand-charcoal hover:bg-gray-50">Kontakt</a>
+            <a href="{{ url('/gallerie-grund') }}"          class="block rounded-lg px-3 py-2 text-brand-charcoal hover:bg-gray-50">Galerie</a>
+            <a href="{{ route('kontakt-grund') }}" class="block rounded-lg px-3 py-2 text-brand-charcoal hover:bg-gray-50">Kontakt</a>
 
 
         </div>
@@ -77,3 +78,5 @@
         });
     </script>
 @endpush
+
+
