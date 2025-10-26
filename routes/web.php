@@ -44,3 +44,5 @@ Route::get('/grundnerguetl/galerie', function () {
 Route::get('/grundnerguetl/kontakt', function () {
     return view('appartments.appartment-grundnerguetl.pages.kontakt-grund');
 })->name('kontakt-grundnerguetl');
+
+Route::view('/kontakt', 'mainpage/pages/kontakt-auswahl')->name('kontakt-auswahl');

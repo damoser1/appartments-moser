@@ -14,7 +14,7 @@
                 </span>
 
                 <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-brand-charcoal">
-                    Appartement <span class="text-brand-pine">Grundnergütl</span>
+                    Apartment <span class="text-brand-pine">Grundnergütl</span>
                 </h1>
 
                 <p class="text-lg text-gray-700 leading-relaxed">

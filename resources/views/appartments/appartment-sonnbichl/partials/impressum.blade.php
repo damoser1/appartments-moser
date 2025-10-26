@@ -9,7 +9,7 @@
             <div>
                 <p class="font-semibold">Anbieter</p>
                 <p>
-                    Appartement Moser am Sonnbichl<br>
+                    Apartment Moser am Sonnbichl<br>
                     Harald Moser<br>
                     Ecking 29<br>
                     5771 Leogang<br>

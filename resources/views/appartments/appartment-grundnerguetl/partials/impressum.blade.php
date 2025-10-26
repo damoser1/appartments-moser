@@ -8,7 +8,7 @@
             <div>
                 <p class="font-semibold">Anbieter</p>
                 <p>
-                    Appartement Moser am Grundnergütl<br>
+                    Apartment Moser am Grundnergütl<br>
                     Thomas Moser<br>
                     Ecking 28<br>
                     5771 Leogang<br>
@@ -19,7 +19,7 @@
             <div>
                 <p>
                     Telefon: <a href="tel:+4369911677336" class="text-brand-forest hover:underline">+43 699 11677336</a><br>
-                    E-Mail: <a href="mailto:reiseservice@saalfelden-leogang.at" class="text-brand-forest hover:underline">reiseservice@saalfelden-leogang.at</a>
+                    E-Mail: <a href="mailto:thomasmoser77@gmx.at" class="text-brand-forest hover:underline">thomasmoser77@gmx.at</a>
                 </p>
             </div>
         </div>

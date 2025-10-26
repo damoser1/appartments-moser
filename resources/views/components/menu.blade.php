@@ -29,10 +29,10 @@
                class="block rounded-lg px-3 py-2 text-brand-charcoal hover:bg-gray-50 js-menu-link">Startseite</a>
 
             <a href="{{ route('sonnbichl') }}"
-               class="block rounded-lg px-3 py-2 text-brand-charcoal hover:bg-gray-50">Appartement Sonnbichl</a>
+               class="block rounded-lg px-3 py-2 text-brand-charcoal hover:bg-gray-50">Apartment Sonnbichl</a>
 
             <a href="{{ route('grundnerguetl') }}"
-               class="block rounded-lg px-3 py-2 text-brand-charcoal hover:bg-gray-50">Appartement Grundnergütl</a>
+               class="block rounded-lg px-3 py-2 text-brand-charcoal hover:bg-gray-50">Apartment Grundnergütl</a>
 
             <a href="{{ url('/#benefits') }}"
                class="block rounded-lg px-3 py-2 text-brand-charcoal hover:bg-gray-50 js-menu-link">Vorteile</a>
@@ -53,7 +53,7 @@
 
         {{-- Footer/CTA --}}
         <div class="mt-auto p-4 space-y-3 border-t border-gray-100">
-            <a href="{{ url('/kontakt') }}"
+            <a href="{{ route('kontakt-auswahl') }}"
                class="block text-center rounded-xl px-4 py-2.5 font-semibold
                 bg-brand-pine hover:bg-brand-forest text-white shadow">
                 Jetzt Kontakt aufnehmen

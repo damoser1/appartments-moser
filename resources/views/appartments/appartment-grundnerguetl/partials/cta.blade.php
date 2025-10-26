@@ -5,7 +5,7 @@
         'Könnten Sie mir bitte Informationen zur Verfügbarkeit und den Preisen geben? Vielen Dank!'
     );
 
-    $mailTo   = 'reiseservice@saalfelden-leogang.at';
+    $mailTo   = 'thomasmoser77@gmx.at';
     $subject  = rawurlencode('Anfrage · Appartement Grundnergütl');
     $mailBody = rawurlencode(
         "Guten Tag Herr Moser,\n\n" .
@@ -59,7 +59,7 @@
 
         {{-- Kontaktinfo --}}
         <div class="mt-6 text-gray-700">
-            <p><strong>Telefon:</strong> +43 699 11677336</p>
+            <p><strong>Telefon:</strong> +43 (0) 699 11677336</p>
             <p><strong>E-Mail:</strong>
                 <a href="mailto:{{ $mailTo }}" class="text-brand-forest hover:underline">
                     {{ $mailTo }}

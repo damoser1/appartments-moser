@@ -11,7 +11,7 @@
                      class="h-26 w-auto mr-[-20px]" loading="eager" decoding="async">
                 <div class="leading-tight">
                     <div class="text-sm font-semibold text-brand-charcoal">Apartment</div>
-                    <div class="text-lg font-extrabold text-brand-pine">Sonnbichl</div>
+                    <div class="text-lg font-extrabold text-brand-pine">Grundnergütl</div>
                 </div>
             </a>
 

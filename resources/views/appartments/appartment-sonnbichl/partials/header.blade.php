@@ -9,7 +9,7 @@
                 <img src="{{ asset('assets/icon-sonnbichl.png') }}" alt="Logo Sonnbichl"
                      class="h-26 w-auto mr-[-20px]" loading="eager" decoding="async">
                 <div class="leading-tight">
-                    <div class="text-sm font-semibold text-brand-charcoal">Appartement</div>
+                    <div class="text-sm font-semibold text-brand-charcoal">Apartment</div>
                     <div class="text-lg font-extrabold text-brand-gold">Sonnbichl</div>
                 </div>
             </a>

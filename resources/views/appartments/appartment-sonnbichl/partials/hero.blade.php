@@ -14,7 +14,7 @@
                 </span>
 
                 <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-brand-charcoal">
-                    Appartement <span class="text-brand-gold">Sonnbichl</span>
+                    Apartment <span class="text-brand-gold">Sonnbichl</span>
                 </h1>
 
                 <p class="text-lg text-gray-700 leading-relaxed text-center xl:text-left max-w-xl mx-auto xl:mx-0">
