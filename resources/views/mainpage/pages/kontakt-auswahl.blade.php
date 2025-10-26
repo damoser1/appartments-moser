@@ -97,6 +97,10 @@
                             Per WhatsApp anfragen
                         </a>
 
+                        <p class="text-xs text-gray-100 text-center leading-snug">
+                            Mit Klick auf WhatsApp stimmen Sie den Datenschutzrichtlinien von WhatsApp/Meta zu.
+                        </p>
+
                         <a href="mailto:{{ $grundMailTo }}?subject={{ $grundSubject }}&body={{ $grundBody }}"
                            class="inline-flex items-center justify-center gap-2 w-full px-8 py-4 rounded-2xl
                               bg-brand-pine hover:bg-brand-forest text-white font-semibold shadow-md transition">
