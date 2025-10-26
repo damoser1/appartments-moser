@@ -65,6 +65,9 @@
                             </svg>
                             Per WhatsApp anfragen
                         </a>
+                        <p class="text-xs text-gray-600 text-center leading-snug">
+                            Mit Klick auf WhatsApp stimmen Sie den Datenschutzrichtlinien von WhatsApp/Meta zu.
+                        </p>
 
                         <a href="mailto:{{ $sonnMailTo }}?subject={{ $sonnSubject }}&body={{ $sonnBody }}"
                            class="inline-flex items-center justify-center gap-2 w-full px-8 py-4 rounded-2xl
@@ -97,7 +100,7 @@
                             Per WhatsApp anfragen
                         </a>
 
-                        <p class="text-xs text-gray-100 text-center leading-snug">
+                        <p class="text-xs text-gray-600 text-center leading-snug">
                             Mit Klick auf WhatsApp stimmen Sie den Datenschutzrichtlinien von WhatsApp/Meta zu.
                         </p>
 

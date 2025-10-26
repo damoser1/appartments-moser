@@ -2,15 +2,23 @@ import './bootstrap';
 
 document.addEventListener('DOMContentLoaded', () => {
     const consentStorageKey = 'appartments-moser.maps-consent';
+    const consentStates = {
+        accepted: 'accepted',
+        declined: 'declined',
+    };
+
     const banner = document.getElementById('consent-banner');
     const acceptButtons = document.querySelectorAll('[data-consent-accept]');
+    const declineButtons = document.querySelectorAll('[data-consent-decline]');
+    const manageButtons = document.querySelectorAll('[data-consent-manage]');
     const mapWrappers = document.querySelectorAll('[data-google-maps-wrapper]');
     let mapsScriptRequested = false;
 
-    const hasConsent = () => localStorage.getItem(consentStorageKey) === 'true';
+    const getConsentState = () => localStorage.getItem(consentStorageKey);
+    const hasConsent = () => getConsentState() === consentStates.accepted;
 
-    const showBanner = () => {
-        if (!banner || hasConsent()) {
+    const openBanner = () => {
+        if (!banner) {
             return;
         }
         banner.classList.remove('hidden');
@@ -23,6 +31,34 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         banner.classList.add('hidden');
         banner.setAttribute('aria-hidden', 'true');
+    };
+
+    const showBannerIfNeeded = () => {
+        if (getConsentState()) {
+            return;
+        }
+        openBanner();
+    };
+
+    const setConsentState = (state) => {
+        if (!state) {
+            localStorage.removeItem(consentStorageKey);
+            return;
+        }
+        localStorage.setItem(consentStorageKey, state);
+    };
+
+    const disableMaps = () => {
+        mapWrappers.forEach((wrapper) => {
+            const mapElement = wrapper.querySelector('#map');
+            if (!mapElement) {
+                return;
+            }
+
+            mapElement.replaceChildren();
+            mapElement.removeAttribute('style');
+            mapElement.classList.add('bg-gray-100');
+        });
     };
 
     const updateConsentMessages = () => {
@@ -70,21 +106,51 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const enableMaps = () => {
-        updateConsentMessages();
-        const wrapper = mapWrappers[0];
-        if (!wrapper) {
+        if (!hasConsent()) {
             return;
         }
 
-        const { apiKey } = wrapper.dataset;
+        updateConsentMessages();
+
+        mapWrappers.forEach((wrapper) => {
+            const mapElement = wrapper.querySelector('#map');
+            if (mapElement) {
+                mapElement.classList.remove('bg-gray-100');
+            }
+        });
+
+        const wrapperWithKey = mapWrappers[0];
+        if (!wrapperWithKey) {
+            return;
+        }
+
+        const { apiKey } = wrapperWithKey.dataset;
         loadGoogleMapsScript(apiKey);
     };
 
     acceptButtons.forEach((button) => {
         button.addEventListener('click', () => {
-            localStorage.setItem(consentStorageKey, 'true');
+            setConsentState(consentStates.accepted);
             hideBanner();
             enableMaps();
+        });
+    });
+
+    declineButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            setConsentState(consentStates.declined);
+            hideBanner();
+            disableMaps();
+            updateConsentMessages();
+        });
+    });
+
+    manageButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            setConsentState(consentStates.declined);
+            disableMaps();
+            updateConsentMessages();
+            openBanner();
         });
     });
 
@@ -92,7 +158,12 @@ document.addEventListener('DOMContentLoaded', () => {
         hideBanner();
         enableMaps();
     } else {
-        showBanner();
+        if (getConsentState() === consentStates.declined) {
+            hideBanner();
+            disableMaps();
+        } else {
+            showBannerIfNeeded();
+        }
         updateConsentMessages();
     }
 });

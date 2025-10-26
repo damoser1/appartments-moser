@@ -7,7 +7,7 @@
         <div data-google-maps-wrapper
              data-api-key="{{ config('services.google_maps.api_key') }}"
              class="relative">
-            <div id="map" class="w-full h-96 rounded-2xl shadow-lg overflow-hidden"></div>
+            <div id="map" class="w-full h-96 rounded-2xl shadow-lg overflow-hidden bg-gray-100"></div>
 
             <div data-map-consent-message
                  class="absolute inset-0 flex flex-col items-center justify-center gap-3
@@ -18,7 +18,8 @@
                 </p>
                 <p>
                     Mit deiner Zustimmung werden Inhalte von Google (USA) nachgeladen. Dabei können personenbezogene
-                    Daten an Google übertragen werden. Weitere Informationen findest du in unseren Datenschutzhinweisen.
+                    Daten an Google übertragen werden. Ohne Zustimmung bleibt die Karte deaktiviert. Weitere Informationen
+                    findest du in unseren Datenschutzhinweisen.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-3 items-center">
                     <button type="button"
@@ -27,6 +28,12 @@
                                    font-semibold text-white shadow hover:bg-brand-forest transition">
                         Zustimmung erteilen &amp; Karte laden
                     </button>
+                    <button type="button"
+                            data-consent-decline
+                            class="inline-flex items-center justify-center rounded-full border border-brand-charcoal/10 px-5 py-2 text-sm
+                                   font-semibold text-brand-charcoal bg-white hover:bg-gray-100 transition">
+                        Karte blockiert lassen
+                    </button>
                     <a href="{{ route('datenschutz-sonnbichl') }}"
                        class="text-sm font-medium text-brand-pine hover:text-brand-forest hover:underline"
                        target="_blank" rel="noopener">
@@ -34,6 +41,14 @@
                     </a>
                 </div>
             </div>
+        </div>
+
+        <div class="mt-3 text-center text-xs text-gray-500">
+            <button type="button"
+                    data-consent-manage
+                    class="font-medium text-brand-pine hover:text-brand-forest hover:underline">
+                Einstellungen für eingebettete Karten ändern
+            </button>
         </div>
 
         {{-- Adressen & Links --}}
@@ -67,7 +82,14 @@
 @push('scripts')
     <script>
         window.initMap = function () {
-            const map = new google.maps.Map(document.getElementById('map'), {
+            const mapContainer = document.getElementById('map');
+            if (!mapContainer) {
+                return;
+            }
+
+            mapContainer.classList.remove('bg-gray-100');
+
+            const map = new google.maps.Map(mapContainer, {
                 center: { lat: 47.4452, lng: 12.7960 },
                 zoom: 14,
                 mapTypeId: google.maps.MapTypeId.SATELLITE,

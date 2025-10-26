@@ -19,7 +19,6 @@
 {{-- Footer --}}
 @yield('footer')
 
-{{-- Consent Banner --}}
 <div id="consent-banner"
      class="hidden fixed inset-x-0 bottom-0 z-50 bg-white/95 backdrop-blur border-t border-gray-200 shadow-lg"
      role="dialog" aria-live="polite" aria-hidden="true">
@@ -39,6 +38,12 @@
                     class="inline-flex items-center justify-center rounded-full bg-brand-pine px-6 py-2 text-sm font-semibold
                            text-white shadow hover:bg-brand-forest transition">
                 Zustimmung erteilen
+            </button>
+            <button type="button"
+                    data-consent-decline
+                    class="inline-flex items-center justify-center rounded-full border border-brand-charcoal/20 px-6 py-2 text-sm font-semibold
+                           text-brand-charcoal bg-white hover:bg-gray-100 transition">
+                Nur notwendige Dienste nutzen
             </button>
         </div>
     </div>
