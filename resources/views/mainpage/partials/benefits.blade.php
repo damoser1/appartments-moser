@@ -7,7 +7,7 @@
                 Ihre <span class="text-brand-pine">Benefits</span>
             </h2>
             <p class="mt-4 text-lg text-gray-700">
-                Genießen Sie exklusive Vorteile, wenn Sie direkt bei Moser Appartements buchen.
+                Genießen Sie exklusive Vorteile, wenn Sie direkt bei Moser Apartments buchen.
             </p>
 
             <div class="mt-6 inline-flex items-center gap-3 rounded-2xl px-5 py-2.5

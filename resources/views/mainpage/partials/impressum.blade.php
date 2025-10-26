@@ -24,7 +24,7 @@
 
             <div class="mt-6 text-sm text-gray-700 space-y-4">
                 <p>
-                    <strong>Moser Appartements – Ferienwohnungen Sonnbichl &amp; Grundnergütl</strong><br>
+                    <strong>Moser Apartments – Ferienwohnungen Sonnbichl &amp; Grundnergütl</strong><br>
                     Familie Moser<br>
                     Ecking 28 &amp; 29<br>
                     5771 Leogang<br>
@@ -34,13 +34,13 @@
                 <p>
                     <strong>Telefon</strong>
                     <br>
-                    Sonnbichl: +43 (0)664 8587644<br>
-                    Grundnergütl: +43 (0)699 11677336<br>
+                    Sonnbichl: +43 (0) 664 8587644<br>
+                    Grundnergütl: +43 (0) 699 11677336<br>
                     <br>
                     <strong>E-Mail</strong>
                     <br>
                     Sonnbichl: harald.moser@sbg.at<br>
-                    Grundnergütl: reiseservice@saalfelden-leogang.at
+                    Grundnergütl: thomasmoser77@gmx.at
                 </p>
 
 

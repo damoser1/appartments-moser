@@ -20,7 +20,7 @@
                   bg-brand-gold hover:bg-brand-goldDark
                   text-brand-dark font-semibold rounded-lg shadow-md transition
                   focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold/50 focus-visible:ring-offset-2">
-                    Appartement Sonnbichl ansehen
+                    Apartment Sonnbichl ansehen
                 </a>
             </div>
 
@@ -33,7 +33,7 @@
                   bg-brand-pine hover:bg-brand-forest
                   text-white font-semibold rounded-lg shadow-md transition
                   focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-pine/50 focus-visible:ring-offset-2">
-                    Appartement Grundnergütl ansehen
+                    Apartment Grundnergütl ansehen
                 </a>
             </div>
         </div>

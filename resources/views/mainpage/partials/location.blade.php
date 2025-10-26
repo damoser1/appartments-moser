@@ -3,27 +3,29 @@
     <div class="max-w-4xl mx-auto px-6">
         <h2 class="text-3xl font-bold text-center text-brand-charcoal mb-8">Unsere Standorte</h2>
 
+        {{-- Google Map --}}
         <div id="map" class="w-full h-96 rounded-2xl shadow-lg overflow-hidden"></div>
 
+        {{-- Adressen & Links --}}
         <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 md:ml-2 lg:ml-0">
             <div class="space-y-2">
-                <h3 class="font-semibold text-xl text-brand-goldDark">Appartment Sonnbichl</h3>
+                <h3 class="font-semibold text-xl text-brand-goldDark">Apartment Sonnbichl</h3>
                 <p class="text-gray-700">
                     Ecking 29<br>5771 Leogang<br>Österreich
                 </p>
                 <a href="https://www.google.com/maps/place/Ecking+29,+5771+Leogang,+Austria"
-                   target="_blank"
+                   target="_blank" rel="noopener"
                    class="inline-block text-brand-goldDark hover:brightness-90 hover:underline font-medium">
                     Zur Google Maps-Seite
                 </a>
             </div>
             <div class="space-y-2">
-                <h3 class="font-semibold text-xl text-brand-pine">Appartment Grundnergütl</h3>
+                <h3 class="font-semibold text-xl text-brand-pine">Apartment Grundnergütl</h3>
                 <p class="text-gray-700">
                     Ecking 28<br>5771 Leogang<br>Österreich
                 </p>
                 <a href="https://www.google.com/maps/place/Ecking+28,+5771+Leogang,+Austria"
-                   target="_blank"
+                   target="_blank" rel="noopener"
                    class="inline-block text-brand-pine hover:text-brand-forest hover:underline font-medium">
                     Zur Google Maps-Seite
                 </a>
@@ -37,41 +39,83 @@
         window.initMap = function () {
             const map = new google.maps.Map(document.getElementById('map'), {
                 center: { lat: 47.4452, lng: 12.7960 },
-                zoom: 14
+                zoom: 14,
+                mapTypeId: google.maps.MapTypeId.SATELLITE,
+                // ✅ Optional: Geländeansicht aktivieren (mehr Tiefe & Topografie)
+                tilt: 45,
+                mapTypeControl: true,
+                streetViewControl: true,
+                fullscreenControl: true
             });
 
+            // Brand-konforme Marker
             const icons = {
                 gold: {
                     path: google.maps.SymbolPath.CIRCLE,
                     scale: 10,
-                    fillColor: '#E3C55E',   // brand-goldDark
+                    fillColor: '#E3C55E',
                     fillOpacity: 1,
-                    strokeColor: '#3F443D', // brand-charcoal (dezenter Rand)
+                    strokeColor: '#3F443D',
                     strokeOpacity: 0.4,
                     strokeWeight: 2
                 },
                 green: {
                     path: google.maps.SymbolPath.CIRCLE,
                     scale: 10,
-                    fillColor: '#2E6B4A',   // brand-pine
+                    fillColor: '#2E6B4A',
                     fillOpacity: 1,
-                    strokeColor: '#274D3B', // brand-forest
+                    strokeColor: '#274D3B',
                     strokeWeight: 2
                 }
             };
 
-            const markers = [
-                { position: { lat: 47.4453191, lng: 12.7965295 }, title: 'Appartement Sonnbichl', icon: icons.gold },
-                { position: { lat: 47.4450325, lng: 12.7958214 }, title: 'Appartement Grundnergütl', icon: icons.green }
+            const locations = [
+                {
+                    position: { lat: 47.4453191, lng: 12.7965295 },
+                    title: 'Apartment Sonnbichl',
+                    icon: icons.gold,
+                    url: 'https://www.google.com/maps/place/Ecking+29,+5771+Leogang,+Austria'
+                },
+                {
+                    position: { lat: 47.4450325, lng: 12.7958214 },
+                    title: 'Apartment Grundnergütl',
+                    icon: icons.green,
+                    url: 'https://www.google.com/maps/place/Ecking+28,+5771+Leogang,+Austria'
+                }
             ];
 
             const bounds = new google.maps.LatLngBounds();
-            markers.forEach(m => {
-                new google.maps.Marker({ position: m.position, map, title: m.title, icon: m.icon });
-                bounds.extend(m.position);
+            const infoWindow = new google.maps.InfoWindow();
+
+            locations.forEach(loc => {
+                const marker = new google.maps.Marker({
+                    position: loc.position,
+                    map,
+                    title: loc.title,
+                    icon: loc.icon
+                });
+
+                marker.addListener('click', () => {
+                    infoWindow.setContent(
+                        `<div style="font-family:inherit;line-height:1.3">
+                    <strong>${loc.title}</strong><br>
+                    <a href="${loc.url}" target="_blank" rel="noopener" style="text-decoration:underline">
+                        In Google Maps öffnen
+                    </a>
+                </div>`
+                    );
+                    infoWindow.open(map, marker);
+                });
+
+                bounds.extend(loc.position);
             });
+
             map.fitBounds(bounds);
         };
     </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ config('services.google_maps.api_key') }}&callback=initMap"></script>
+
+    {{-- Google Maps API laden --}}
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key={{ config('services.google_maps.api_key') }}&callback=initMap">
+    </script>
 @endpush

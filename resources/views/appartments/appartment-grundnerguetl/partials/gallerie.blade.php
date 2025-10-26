@@ -2,7 +2,7 @@
 
 @php
     $images = [];
-    for ($i = 1; $i <= 11; $i++) {
+    for ($i = 1; $i <= 10; $i++) {
         $images[] = asset("assets/gallery-grundnerguetl/pic{$i}.jpg");
     }
 
@@ -62,7 +62,7 @@
                         bg-brand-pine hover:bg-brand-forest text-white/90 font-semibold shadow-md transition">
                 ← Zurück zum Apartment
             </a>
-            <a href="{{ url('/kontakt#formular') }}"
+            <a href="{{ route('kontakt-grundnerguetl') }}"
                class="inline-flex items-center justify-center px-6 py-3 rounded-2xl
                       bg-brand-pine hover:bg-brand-forest text-white/90 font-semibold shadow-md transition">
                 Jetzt Kontakt aufnehmen
@@ -74,49 +74,76 @@
 @push('scripts')
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Lightbox (wie zuvor)
+            // Lightbox
             const links = Array.from(document.querySelectorAll('[data-lightbox="sonnbichl"]'));
             if (links.length) {
                 let i = 0;
                 const sources = links.map(a => a.getAttribute('href'));
+
                 const overlay = document.createElement('div');
-                overlay.className = 'fixed inset-0 z-[60] hidden items-center justify-center bg-black/85';
+                overlay.className =
+                    'fixed inset-0 z-[60] hidden flex items-center justify-center bg-black/85';
                 overlay.innerHTML = `
-            <button aria-label="Schließen" id="lb-close"
-                class="absolute top-4 right-4 rounded-full bg-white/90 hover:bg-white p-2 shadow">✕</button>
-            <button aria-label="Vorheriges Bild" id="lb-prev"
-                class="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 rounded-full bg-white/90 hover:bg-white p-2 shadow">‹</button>
-            <img id="lb-img" alt="Galerie Bild" class="max-h-[85vh] max-w-[95vw] object-contain ring-1 ring-brand-gold/30 rounded-xl">
-            <button aria-label="Nächstes Bild" id="lb-next"
-                class="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 rounded-full bg-white/90 hover:bg-white p-2 shadow">›</button>
-        `;
+                <button aria-label="Schließen" id="lb-close"
+                    class="absolute top-4 right-4 rounded-full bg-white/90 hover:bg-white p-2 shadow">✕</button>
+                <button aria-label="Vorheriges Bild" id="lb-prev"
+                    class="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 rounded-full bg-white/90 hover:bg-white p-2 shadow">‹</button>
+                <img id="lb-img" alt="Galerie Bild"
+                    class="max-h-[85vh] max-w-[95vw] object-contain ring-1 ring-brand-gold/30 rounded-xl">
+                <button aria-label="Nächstes Bild" id="lb-next"
+                    class="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 rounded-full bg-white/90 hover:bg-white p-2 shadow">›</button>
+            `;
                 document.body.appendChild(overlay);
-                const img   = overlay.querySelector('#lb-img');
-                const btnX  = overlay.querySelector('#lb-close');
-                const btnP  = overlay.querySelector('#lb-prev');
-                const btnN  = overlay.querySelector('#lb-next');
 
-                function show(idx){ i = (idx + sources.length) % sources.length; img.src = sources[i]; }
-                function openAt(idx){ show(idx); overlay.classList.remove('hidden'); document.body.style.overflow='hidden'; }
-                function closeLB(){ overlay.classList.add('hidden'); document.body.style.overflow=''; }
+                const img = overlay.querySelector('#lb-img');
+                const btnX = overlay.querySelector('#lb-close');
+                const btnP = overlay.querySelector('#lb-prev');
+                const btnN = overlay.querySelector('#lb-next');
 
-                links.forEach(a => a.addEventListener('click', e => { e.preventDefault(); openAt(parseInt(a.dataset.index)); }));
+                function show(idx) {
+                    i = (idx + sources.length) % sources.length;
+                    img.src = sources[i];
+                }
+
+                function openAt(idx) {
+                    show(idx);
+                    overlay.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                }
+
+                function closeLB() {
+                    overlay.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }
+
+                links.forEach(a =>
+                    a.addEventListener('click', e => {
+                        e.preventDefault();
+                        openAt(parseInt(a.dataset.index));
+                    })
+                );
+
                 btnX.addEventListener('click', closeLB);
                 btnP.addEventListener('click', () => show(i - 1));
                 btnN.addEventListener('click', () => show(i + 1));
-                overlay.addEventListener('click', e => { if (e.target === overlay) closeLB(); });
+                overlay.addEventListener('click', e => {
+                    if (e.target === overlay) closeLB();
+                });
+
                 window.addEventListener('keydown', e => {
                     if (overlay.classList.contains('hidden')) return;
                     if (e.key === 'Escape') closeLB();
                     if (e.key === 'ArrowLeft') show(i - 1);
                     if (e.key === 'ArrowRight') show(i + 1);
-                }, {passive:true});
+                }, { passive: true });
             }
 
+            // Mehr anzeigen Button
             const btnMore = document.getElementById('galerie-more');
             if (btnMore) {
                 btnMore.addEventListener('click', () => {
-                    document.querySelectorAll('.more-item').forEach(el => el.classList.remove('hidden'));
+                    document.querySelectorAll('.more-item')
+                        .forEach(el => el.classList.remove('hidden'));
                     btnMore.closest('div').remove();
                 });
             }

@@ -53,7 +53,7 @@
 
         {{-- Telefonnummer & E-Mail direkt unter den Buttons --}}
         <div class="text-gray-700 mb-12">
-            <p><strong>Telefon:</strong> <a href="tel:+436648587644" class="text-brand-forest hover:underline">+43 664 8587644</a></p>
+            <p><strong>Telefon:</strong> <a href="tel:+436648587644" class="text-brand-forest hover:underline">+43 (0) 664 8587644</a></p>
             <p><strong>E-Mail:</strong>
                 <a href="mailto:{{ $mailTo }}" class="text-brand-forest hover:underline">
                     {{ $mailTo }}
