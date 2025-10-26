@@ -1,22 +1,52 @@
-@extends('layouts.app')
+<section id="datenschutz" class="w-full bg-white pb-10 md:py-14">
+    <div class="max-w-3xl mx-auto px-6 sm:px-10">
+        <h1 class="text-4xl font-bold text-brand-charcoal text-center mb-12">
+            Datenschutz
+        </h1>
 
-@section('title', 'Datenschutz')
+        <div class="space-y-8 text-lg leading-relaxed text-gray-700">
+            <div>
+                <p class="font-semibold">Allgemeines</p>
+                <p>
+                    Wir nehmen den Schutz deiner persönlichen Daten sehr ernst. Deine Daten werden vertraulich
+                    und entsprechend den gesetzlichen Datenschutzvorschriften behandelt.
+                </p>
+            </div>
 
-@section('content')
-    <section class="max-w-4xl mx-auto px-6 sm:px-10 py-16">
-        <h1 class="text-3xl font-bold text-gray-900 mb-6">Datenschutzerklärung</h1>
+            <div>
+                <p class="font-semibold">Erhebung und Verarbeitung</p>
+                <p>
+                    Personenbezogene Daten werden nur erhoben, wenn du uns diese im Rahmen einer Anfrage oder
+                    Buchung mitteilst. Diese Daten verwenden wir ausschließlich zur Bearbeitung deiner Anfrage
+                    und für die Abwicklung der Buchung.
+                </p>
+            </div>
 
-        <p>Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen. Wir verarbeiten Ihre Daten daher ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, TKG 2003). In dieser Datenschutzerklärung informieren wir Sie über die wichtigsten Aspekte der Datenverarbeitung im Rahmen unserer Website.</p>
+            <div>
+                <p class="font-semibold">Speicherung</p>
+                <p>
+                    Wir speichern personenbezogene Daten nur so lange, wie dies für die Bearbeitung deiner Anfrage
+                    oder Buchung notwendig ist und gesetzliche Aufbewahrungsfristen bestehen.
+                </p>
+            </div>
 
-        <h2 class="text-xl font-semibold mt-6 mb-2">Kontakt mit uns</h2>
-        <p>Wenn Sie per Formular auf der Website oder per E-Mail Kontakt mit uns aufnehmen, werden Ihre angegebenen Daten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen sechs Monate bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
+            <div>
+                <p class="font-semibold">Deine Rechte</p>
+                <p>
+                    Du hast jederzeit das Recht auf Auskunft über deine gespeicherten Daten, deren Berichtigung,
+                    Löschung oder Einschränkung der Verarbeitung. Wende dich dazu bitte an:
+                    <a href="mailto:harald.moser@sbg.at" class="text-brand-forest hover:underline">harald.moser@sbg.at</a>.
+                </p>
+            </div>
+        </div>
 
-        <h2 class="text-xl font-semibold mt-6 mb-2">Cookies</h2>
-        <p>Unsere Website verwendet Cookies. Sie dienen dazu, unser Angebot nutzerfreundlich zu gestalten. Einige Cookies bleiben auf Ihrem Endgerät gespeichert, bis Sie diese löschen. Sie ermöglichen es uns, Ihren Browser beim nächsten Besuch wiederzuerkennen.</p>
-
-        <h2 class="text-xl font-semibold mt-6 mb-2">Ihre Rechte</h2>
-        <p>Ihnen stehen grundsätzlich die Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerruf und Widerspruch zu. Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt oder Ihre datenschutzrechtlichen Ansprüche sonst in einer Weise verletzt worden sind, können Sie sich bei der Aufsichtsbehörde beschweren. In Österreich ist dies die Datenschutzbehörde.</p>
-
-        <p class="mt-4">Unsere Kontaktdaten finden Sie im <a href="{{ url('/impressum') }}" class="text-emerald-700 hover:underline">Impressum</a>.</p>
-    </section>
-@endsection
+        {{-- Zurück-Button --}}
+        <div class="mt-16 flex justify-center">
+            <a href="{{ route('sonnbichl') }}"
+               class="inline-flex items-center px-8 py-4 rounded-2xl bg-brand-gold hover:bg-brand-goldDark
+                text-brand-charcoal font-semibold shadow-md transition">
+                ← Zurück zur Apartmentseite
+            </a>
+        </div>
+    </div>
+</section>

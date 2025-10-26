@@ -12,7 +12,7 @@
             </svg>
         </button>
 
-        <div class="flex flex-col lg:flex-row items-center xl:gap-6 mt-[-20px] sm:mt-0 xl:ml-20">
+        <div class="flex flex-col lg:flex-row items-center xl:gap-6 mt-[-20px] sm:mt-0 xl:ml-30">
 
             {{-- ICONS: bis md sichtbar, ab lg ausgeblendet --}}
             <div class="relative h-[90px] w-[160px] shrink-0 lg:hidden">
@@ -48,7 +48,7 @@
         {{-- 3) Aktion-Buttons --}}
         <div class="flex flex-col items-center gap-3 flex-shrink-0 md:items-end md:flex-col xl:flex-row lg:gap-3 xl:items-center ">
             <a href="{{ route('sonnbichl') }}"
-               class="max-w-xs whitespace-normal bg-brand-gold hover:bg-brand-goldDark text-brand-dark font-semibold py-2 px-4 rounded-xl shadow text-center">
+               class="max-w-xs whitespace-normal bg-brand-gold hover:bg-brand-goldDark text-brand-dark font-semibold py-2 px-7 sm:px-4 rounded-xl shadow text-center">
                 Apartment Sonnbichl
             </a>
             <a href="{{ route('grundnerguetl') }}"

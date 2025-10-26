@@ -1,32 +1,38 @@
-@extends('layouts.app')
+{{-- Impressum --}}
+<section id="impressum" class="w-full bg-white md:py-14 text-center">
+    <div class="max-w-3xl mx-auto px-6 sm:px-10">
+        <h1 class="text-4xl font-bold text-brand-charcoal mb-12">
+            Impressum
+        </h1>
 
-@section('title', 'Impressum')
+        <div class="space-y-8 text-lg leading-relaxed text-gray-700">
+            <div>
+                <p class="font-semibold">Anbieter</p>
+                <p>
+                    Appartement Moser am Sonnbichl<br>
+                    Harald Moser<br>
+                    Ecking 29<br>
+                    5771 Leogang<br>
+                    Österreich
+                </p>
+            </div>
 
-@section('content')
-    <section class="max-w-4xl mx-auto px-6 sm:px-10 py-16">
-        <h1 class="text-3xl font-bold text-gray-900 mb-6">Impressum</h1>
+            <div>
+                <p>
+                    Telefon: <a href="tel:+436648587644" class="text-brand-forest hover:underline">+43 664 8587644</a><br>
+                    E-Mail: <a href="mailto:harald.moser@sbg.at" class="text-brand-forest hover:underline">harald.moser@sbg.at</a>
+                </p>
+            </div>
+        </div>
 
-        <p><strong>Angaben gemäß § 5 ECG:</strong></p>
-        <p>Apartment Moser am Sonnbichl<br>
-            Max Mustermann<br>
-            Ecking 29<br>
-            5771 Leogang<br>
-            Österreich</p>
-
-        <p class="mt-4">
-            <strong>Kontakt:</strong><br>
-            Telefon: +43 664 1234567<br>
-            E-Mail: info@sonnbichl-leogang.at
-        </p>
-
-        <p class="mt-4">
-            <strong>UID-Nummer:</strong> ATU12345678<br>
-            <strong>Mitglied bei:</strong> Wirtschaftskammer Salzburg
-        </p>
-
-        <p class="mt-4 text-sm text-gray-500">
-            Haftungsausschluss: Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links.
-            Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
-        </p>
-    </section>
-@endsection
+        {{-- Zurück-Button --}}
+        <div class="mt-16 flex justify-center">
+            <a href="{{ route('sonnbichl') }}"
+               class="inline-flex items-center gap-2 px-8 py-4 rounded-2xl
+                bg-brand-gold hover:bg-brand-goldDark
+                text-brand-charcoal font-semibold shadow-md transition">
+                ← Zurück zur Apartmentseite
+            </a>
+        </div>
+    </div>
+</section>

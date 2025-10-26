@@ -1,9 +1,14 @@
-<footer class="bg-gray-900 text-gray-400 text-sm py-6">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between gap-4">
-        <p>© {{ date('Y') }} Apartment Sonnbichl · Alle Rechte vorbehalten</p>
-        <div class="flex gap-6">
-            <a href="{{ route('impressum-sonnbichl') }}" class="hover:text-white">Impressum</a>
-            <a href="{{ route('datenschutz-sonnbichl') }}" class="hover:text-white">Datenschutz</a>
+<footer class="bg-gray-100 text-gray-700 text-base border-t-4 border-brand-gold
+               mx-[calc(50%-50vw)] w-[100vw]">
+    <div class="max-w-7xl mx-auto px-6 py-6 sm:px-10 lg:px-16
+              flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-gray-700 text-center sm:text-left">
+            © {{ date('Y') }} Appartement Sonnbichl · Alle Rechte vorbehalten
+        </p>
+
+        <div class="flex gap-8 font-medium">
+            <a href="{{ route('impressum-sonnbichl') }}" class="text-brand-charcoal hover:text-brand-forest">Impressum</a>
+            <a href="{{ route('datenschutz-sonnbichl') }}" class="text-brand-charcoal hover:text-brand-forest">Datenschutz</a>
         </div>
     </div>
 </footer>
