@@ -11,37 +11,36 @@ Route::prefix('')->group(function () {
 
 // sonnbichl
 Route::view(
-    '/appartment-sonnbichl/impressum-sonn',
+    '/sonnbichl/impressum',
     'appartments.appartment-sonnbichl.pages.impressum-sonn'
 )->name('impressum-sonnbichl');
 
 Route::view(
-    '/appartment-sonnbichl/datenschutz-sonn',
+    '/sonnbichl/datenschutz',
     'appartments.appartment-sonnbichl.pages.datenschutz-sonn'
 )->name('datenschutz-sonnbichl');
 
-Route::get('/galerie', function () {
+Route::get('/sonnbichl/gallerie', function () {
     return view('appartments.appartment-sonnbichl.pages.gallerie-sonn');
-})->name('galerie-sonnbichl');
+})->name('gallerie-sonnbichl');
 
-Route::get('/kontakt', function () {
+Route::get('/sonnbichl/kontakt', function () {
     return view('appartments.appartment-sonnbichl.pages.kontakt-sonn');
 })->name('kontakt-sonnbichl');
 
 // grundnerguetl
-
-Route::get('/grundnerguetl/impressum-grund', function () {
+Route::get('/grundnerguetl/impressum', function () {
     return view('appartments.appartment-grundnerguetl.pages.impressum-grund');
 })->name('impressum-grundnerguetl');
 
-Route::get('/grundnerguetl/datenschutz-grund', function () {
+Route::get('/grundnerguetl/datenschutz', function () {
     return view('appartments.appartment-grundnerguetl.pages.datenschutz-grund');
 })->name('datenschutz-grundnerguetl');
 
 Route::get('/grundnerguetl/galerie', function () {
     return view('appartments.appartment-grundnerguetl.pages.gallerie-grund');
-})->name('galerie-grundnerguetl');
+})->name('gallerie-grundnerguetl');
 
-Route::get('/grundnerguetl/kontakt-grund', function () {
+Route::get('/grundnerguetl/kontakt', function () {
     return view('appartments.appartment-grundnerguetl.pages.kontakt-grund');
 })->name('kontakt-grundnerguetl');

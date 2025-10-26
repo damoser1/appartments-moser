@@ -17,7 +17,7 @@
             {{-- Hauptnavigation (≥ lg) --}}
             <nav class="hidden lg:flex items-center gap-7 font-medium">
                 <a href="{{ url('/') }}"                 class="text-brand-charcoal hover:text-brand-forest transition">Startseite</a>
-                <a href="{{ url('/galerie') }}"          class="text-brand-charcoal hover:text-brand-forest transition">Galerie</a>
+                <a href="{{ route('gallerie-sonnbichl') }}"          class="text-brand-charcoal hover:text-brand-forest transition">Galerie</a>
                 <a href="{{ route('kontakt-sonnbichl') }}" class="text-brand-charcoal hover:text-brand-forest transition">Kontakt</a>
             </nav>
 
@@ -37,7 +37,7 @@
     <div id="mobile-menu" class="lg:hidden hidden border-t border-gray-100">
         <div class="px-6 py-4 space-y-1 bg-white">
             <a href="{{ url('/') }}"                 class="block rounded-lg px-3 py-2 text-brand-charcoal hover:bg-gray-50">Startseite</a>
-            <a href="{{ url('/galerie') }}"          class="block rounded-lg px-3 py-2 text-brand-charcoal hover:bg-gray-50">Galerie</a>
+            <a href="{{ route('gallerie-sonnbichl') }}"          class="block rounded-lg px-3 py-2 text-brand-charcoal hover:bg-gray-50">Galerie</a>
             <a href="{{ route('kontakt-sonnbichl') }}" class="block rounded-lg px-3 py-2 text-brand-charcoal hover:bg-gray-50">Kontakt</a>
 
 

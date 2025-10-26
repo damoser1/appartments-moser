@@ -1,4 +1,4 @@
-<section class="w-full bg-white py-16">
+<section class="w-full bg-white mb-12">
     <div class="max-w-3xl mx-auto px-6 sm:px-10 text-center">
         <a href="{{ url('/') }}"
            class="inline-flex items-center gap-2 px-8 py-4 rounded-2xl

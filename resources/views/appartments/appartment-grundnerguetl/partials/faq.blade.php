@@ -1,5 +1,5 @@
 {{-- FAQ Section --}}
-<section id="faq" class="bg-white py-20">
+<section id="faq" class="bg-white pt-10 sm:pt-0 xl:pt-20 pb-10">
     <div class="max-w-4xl mx-auto px-6 sm:px-10">
         <div class="text-center mb-10">
             <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-charcoal">Häufig gestellte Fragen</h2>
@@ -12,7 +12,7 @@
             @php
                 $faqs = [
                     ['q' => 'Wie viele Personen können im Apartment wohnen?',
-                     'a' => 'Ideal für 2–4 Gäste: 1 Doppelzimmer + Schlafsofa im Wohnbereich.'],
+                     'a' => 'Ideal für 2–5 Gäste: 2 Schlafzimmer, 2 Doppelbett und 1 Einzelbett'],
 
                     ['q' => 'Zahlung & Stornierung',
                      'a' => 'Stornierungs- und Anzahlungsbedingungen variieren je nach Zeitraum. Bitte frag für deinen Wunschzeitraum nach.'],
@@ -59,6 +59,7 @@
             @endforeach
         </div>
 
+        {{-- Mehr/Weniger Button --}}
         <div class="text-center mt-6">
             <button id="faq-toggle"
                     class="inline-flex items-center gap-2 text-brand-charcoal font-medium hover:text-brand-forest transition">
@@ -73,50 +74,48 @@
 </section>
 
 @push('scripts')
-    @push('scripts')
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const buttons = document.querySelectorAll('[data-accordion-btn]');
-                buttons.forEach(btn => {
-                    btn.addEventListener('click', () => {
-                        const idx = btn.getAttribute('data-accordion-btn');
-                        const panel = document.querySelector('[data-accordion-panel="'+idx+'"]');
-                        const icon = btn.querySelector('[data-icon]');
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('[data-accordion-btn]');
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const idx = btn.getAttribute('data-accordion-btn');
+                    const panel = document.querySelector('[data-accordion-panel="'+idx+'"]');
+                    const icon = btn.querySelector('[data-icon]');
 
-                        const isOpen = !panel.classList.contains('hidden');
-                        // Alles schließen
-                        document.querySelectorAll('[data-accordion-panel]').forEach(p => p.classList.add('hidden'));
-                        document.querySelectorAll('[data-icon]').forEach(i => i.style.transform = 'rotate(0deg)');
+                    const isOpen = !panel.classList.contains('hidden');
+                    // Alles schließen
+                    document.querySelectorAll('[data-accordion-panel]').forEach(p => p.classList.add('hidden'));
+                    document.querySelectorAll('[data-icon]').forEach(i => i.style.transform = 'rotate(0deg)');
 
-                        if (!isOpen) {
-                            panel.classList.remove('hidden');
-                            icon.style.transform = 'rotate(45deg)'; // Plus → Kreuz
+                    if (!isOpen) {
+                        panel.classList.remove('hidden');
+                        icon.style.transform = 'rotate(45deg)'; // Plus → Kreuz
+                    }
+                });
+            });
+
+            const faqToggle = document.getElementById('faq-toggle');
+            const faqItems = document.querySelectorAll('.faq-item');
+            const toggleIcon = document.getElementById('faq-toggle-icon');
+
+            if (faqToggle) {
+                faqToggle.addEventListener('click', () => {
+                    const hiddenItems = document.querySelectorAll('.faq-item.hidden');
+                    const showingMore = hiddenItems.length === 0;
+
+                    faqItems.forEach((item, i) => {
+                        if (i > 2) {
+                            item.classList.toggle('hidden', showingMore);
                         }
                     });
+
+                    // Text & Icon anpassen
+                    faqToggle.querySelector('span').textContent = showingMore ? 'Mehr anzeigen' : 'Weniger anzeigen';
+                    toggleIcon.style.transform = showingMore ? 'rotate(0deg)' : 'rotate(180deg)';
                 });
-
-                const faqToggle = document.getElementById('faq-toggle');
-                const faqItems = document.querySelectorAll('.faq-item');
-                const toggleIcon = document.getElementById('faq-toggle-icon');
-
-                if (faqToggle) {
-                    faqToggle.addEventListener('click', () => {
-                        const hiddenItems = document.querySelectorAll('.faq-item.hidden');
-                        const showingMore = hiddenItems.length === 0;
-
-                        faqItems.forEach((item, i) => {
-                            if (i > 2) {
-                                item.classList.toggle('hidden', showingMore);
-                            }
-                        });
-
-                        // Text & Icon anpassen
-                        faqToggle.querySelector('span').textContent = showingMore ? 'Mehr anzeigen' : 'Weniger anzeigen';
-                        toggleIcon.style.transform = showingMore ? 'rotate(0deg)' : 'rotate(180deg)';
-                    });
-                }
-            });
-        </script>
-    @endpush
+            }
+        });
+    </script>
 @endpush
 

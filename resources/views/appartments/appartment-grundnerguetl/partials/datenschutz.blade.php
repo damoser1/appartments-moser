@@ -1,4 +1,4 @@
-<section id="datenschutz" class="w-full bg-white py-24">
+<section id="datenschutz" class="w-full bg-white pb-10 md:py-14">
     <div class="max-w-3xl mx-auto px-6 sm:px-10">
         <h1 class="text-4xl font-bold text-brand-charcoal text-center mb-12">
             Datenschutz

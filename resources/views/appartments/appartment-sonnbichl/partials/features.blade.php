@@ -116,7 +116,7 @@
                     </div>
                     <div>
                         <h3 class="font-semibold text-brand-charcoal">Extras</h3>
-                        <p class="text-gray-700 text-sm mt-1">Kinderbett, Skiraum, Waschmaschine (auf Anfrage) und mehr.</p>
+                        <p class="text-gray-700 text-sm mt-1">Skiraum, Waschmaschine (auf Anfrage) und mehr.</p>
                     </div>
                 </div>
             </div>

@@ -13,26 +13,26 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
             {{-- Sonnbichl = GOLD --}}
             <div class="flex flex-col items-center">
-                <img src="{{ asset('assets/bildtransparent.png') }}" alt="Appartement Sonnbichl"
-                     class="w-full h-auto object-cover rounded-lg mb-4 max-h-96">
+                <img src="{{ asset('assets/slide-sonnbichl/slide1.jpeg') }}" alt="Appartement Sonnbichl"
+                     class="w-full h-64 object-cover rounded-lg mb-4">
                 <a href="{{ route('sonnbichl') }}"
                    class="w-full max-w-xs text-center px-6 py-4
-                          bg-brand-gold hover:bg-brand-goldDark
-                          text-brand-dark font-semibold rounded-lg shadow-md transition
-                          focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold/50 focus-visible:ring-offset-2">
+                  bg-brand-gold hover:bg-brand-goldDark
+                  text-brand-dark font-semibold rounded-lg shadow-md transition
+                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold/50 focus-visible:ring-offset-2">
                     Appartement Sonnbichl ansehen
                 </a>
             </div>
 
             {{-- Grundnergütl = GRÜN --}}
             <div class="flex flex-col items-center">
-                <img src="{{ asset('assets/bildtransparent.png') }}" alt="Appartement Grundnergütl"
-                     class="w-full h-auto object-cover rounded-lg mb-4 max-h-96">
+                <img src="{{ asset('assets/slideshow-grundnerguetl/slide1.jpg') }}" alt="Appartement Grundnergütl"
+                     class="w-full h-64 object-cover rounded-lg mb-4">
                 <a href="{{ route('grundnerguetl') }}"
                    class="w-full max-w-xs text-center px-6 py-4
-                          bg-brand-pine hover:bg-brand-forest
-                          text-white font-semibold rounded-lg shadow-md transition
-                          focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-pine/50 focus-visible:ring-offset-2">
+                  bg-brand-pine hover:bg-brand-forest
+                  text-white font-semibold rounded-lg shadow-md transition
+                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-pine/50 focus-visible:ring-offset-2">
                     Appartement Grundnergütl ansehen
                 </a>
             </div>

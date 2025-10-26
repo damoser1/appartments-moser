@@ -2,7 +2,7 @@
     // WhatsApp
     $waPhone = '4369911677336';
     $waMsg   = rawurlencode(
-        'Guten Tag Familie Moser, ich interessiere mich für das Appartement Grundnergütl in Leogang. ' .
+        'Guten Tag Herr Moser, ich interessiere mich für das Appartement Grundnergütl in Leogang. ' .
         'Könnten Sie mir bitte Informationen zur Verfügbarkeit und den Preisen geben? Vielen Dank!'
     );
 
@@ -10,7 +10,7 @@
     $mailTo   = 'reiseservice@saalfelden-leogang.at';
     $subject  = rawurlencode('Anfrage · Appartement Grundnergütl');
     $mailBody = rawurlencode(
-        "Guten Tag Familie Moser,\n\n" .
+        "Guten Tag Herr Moser,\n\n" .
         "ich interessiere mich für das Appartement Grundnergütl in Leogang.\n" .
         "Könnten Sie mir bitte Informationen zur Verfügbarkeit und den Preisen geben?\n\n" .
         "Vielen Dank!"

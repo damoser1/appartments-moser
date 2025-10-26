@@ -6,7 +6,7 @@
 @endsection
 
 @section('content')
-    @include('appartments.appartment-grundnerguetl.partials.galerie')
+    @include('appartments.appartment-grundnerguetl.partials.gallerie')
 @endsection
 
 @section('footer')

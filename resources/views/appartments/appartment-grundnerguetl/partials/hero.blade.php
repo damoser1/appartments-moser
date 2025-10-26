@@ -22,13 +22,13 @@
                 </p>
 
                 <div class="flex flex-wrap gap-2 justify-center xl:justify-start">
-                    <span class="px-3 py-1 rounded-full bg-brand-cream text-brand-goldDark ring-1 ring-brand-gold text-sm">
+                    <span class="px-3 py-1 rounded-full bg-brand-cream text-[#C2A646] ring-1 ring-brand-gold text-sm">
                         Balkon mit Bergblick
                     </span>
-                    <span class="px-3 py-1 rounded-full bg-brand-cream text-brand-goldDark ring-1 ring-brand-gold text-sm">
+                    <span class="px-3 py-1 rounded-full bg-brand-cream text-[#C2A646] ring-1 ring-brand-gold text-sm">
                         Familienfreundlich
                     </span>
-                    <span class="px-3 py-1 rounded-full bg-brand-cream text-brand-goldDark ring-1 ring-brand-gold text-sm">
+                    <span class="px-3 py-1 rounded-full bg-brand-cream text-[#C2A646] ring-1 ring-brand-gold text-sm">
                         WLAN & Parkplatz inkl.
                     </span>
                 </div>
@@ -48,11 +48,10 @@
                 <div class="relative group rounded-3xl overflow-hidden shadow-2xl ring-1 ring-brand-pine/25">
 
                     @php
-                        $slides = [
-                            asset('assets/bildtransparent.png'),
-                            asset('assets/bildtransparent.png'),
-                            asset('assets/bildtransparent.png'),
-                        ];
+                        $slides = [];
+                        for ($i = 1; $i <= 3; $i++) {
+                            $slides[] = asset("assets/slideshow-grundnerguetl/slide{$i}.jpg");
+                        }
                     @endphp
 
                     <div class="relative">

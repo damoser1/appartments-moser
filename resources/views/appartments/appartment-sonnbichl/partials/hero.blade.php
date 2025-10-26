@@ -48,11 +48,10 @@
                 <div class="relative group rounded-3xl overflow-hidden shadow-2xl ring-1 ring-brand-gold/25">
 
                     @php
-                        $slides = [
-                            asset('assets/bildtransparent.png'),
-                            asset('assets/bildtransparent.png'),
-                            asset('assets/bildtransparent.png'),
-                        ];
+                        $slides = [];
+                        for ($i = 1; $i <= 3; $i++) {
+                            $slides[] = asset("assets/slide-sonnbichl/slide{$i}.jpeg");
+                        }
                     @endphp
 
                     <div class="relative">

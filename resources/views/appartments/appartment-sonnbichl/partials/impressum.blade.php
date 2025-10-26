@@ -1,5 +1,5 @@
 {{-- Impressum --}}
-<section id="impressum" class="w-full bg-white md:py-24 text-center">
+<section id="impressum" class="w-full bg-white md:py-14 text-center">
     <div class="max-w-3xl mx-auto px-6 sm:px-10">
         <h1 class="text-4xl font-bold text-brand-charcoal mb-12">
             Impressum
